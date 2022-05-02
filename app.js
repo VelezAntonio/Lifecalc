@@ -2,8 +2,10 @@ const express = require("express");
 const path = require("path")
 const mysql = require("mysql");
 const dotenv = require("dotenv");
+const cookieParser = require('cookie-parser');
 const exp = require("constants");
 
+//gets stuff for db connection
 dotenv.config({path:'./.env'});
 
 //used to start server with app
@@ -20,7 +22,7 @@ const db = mysql.createConnection({
 //join to public dir to use styles
 const publicDirectory = path.join(__dirname, './public')
 app.use(express.static(publicDirectory));
-
+app.use(cookieParser());
 
 app.set('view engine', 'hbs');
 
@@ -34,12 +36,12 @@ db.connect((error) => {
 })
 //prase url encoded bodies sent by html forms
 app.use(express.urlencoded({ extended: false}));
-//prase JSON 
-
+app.use(express.json());
 
 //define routes
 app.use('/',require('./routes/pages'));
 app.use('/auth',require('./routes/auth'));
+
 
 
 app.listen(5001, () => {
