@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <link href="/signup.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    
+    <title>Lifecalc - Sign Up</title>
+</head>
+<body class="join-file ">
+    <script src="./main.js"></script>
+    <div class="container full-height-grow">
+        <header class="main-header">
+            <a href="/" class="brand-logo">
+                <img src="/Images/Logo1.png" height="60" width="60">
+                <div class="brand-logo-name">Lifecalc</div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="/login">Log In </a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="main-section">
+            <form class="form" id="signup" action="/auth/signup" method="POST">
+                <h1 class="text">Create your Account. Start Planning.</h1>
+                <div class="subtitle2">It's Simple!</div>
+                <div class="input-group">
+                    {{#if message}}
+                        <div class="form--message message-error">{{message}}</div>
+                    {{/if}}
+                    <label>Email:</label>
+                    <input type="email" id="email"  autofocus placeholder="Email" name="email">
+                </div>
+                <div class="input-group">
+                    <label>Password:</label>
+                    <input type="password" id="password" placeholder="Password"name="password">
+                </div>
+                    <div class="input-group">
+                    <label>Confirm Password:</label>
+                    <input type="password" id="passwordConfirm" placeholder="Confirm Password"name="passwordConfirm">
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="btn"> Sign Up
+                </div>
+                <p class="form-text">
+                    <a class="form-link" href="/login" id="linkLogin">Already have an account? Log in</a>
+                </p>
+            </form>
+            <div class="side-image">
+                <img src="/Images/side-image.png" height="600">
+            </div>
+  
+        </section>
+    </div>
+    <footer class="main-footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body2>
+</html>
