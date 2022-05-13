@@ -1,9 +1,7 @@
 .home-main-section{
-    
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
     flex-grow: .75;
 }
 .home-main-section .call-to-action{

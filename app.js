@@ -4,6 +4,9 @@ const mysql = require("mysql");
 const dotenv = require("dotenv");
 const cookieParser = require('cookie-parser');
 const exp = require("constants");
+const cors = require("cors")
+
+
 
 //gets stuff for db connection
 dotenv.config({path:'./.env'});
@@ -22,9 +25,17 @@ const db = mysql.createConnection({
 //join to public dir to use styles
 const publicDirectory = path.join(__dirname, './public')
 app.use(express.static(publicDirectory));
+
 app.use(cookieParser());
 
 app.set('view engine', 'hbs');
+
+//api
+app.get('/api',(req,res)=>{
+    res.status(200).send({
+        interest:'5.27'
+    })
+});
 
 //log errors
 db.connect((error) => {
@@ -42,7 +53,12 @@ app.use(express.json());
 app.use('/',require('./routes/pages'));
 app.use('/auth',require('./routes/auth'));
 
-
+app.use(
+    cors({
+        origin: "*",
+        credentials: true,
+    })
+)
 
 app.listen(5001, () => {
     console.log("Server started on Port 5001")

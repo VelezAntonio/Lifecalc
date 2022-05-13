@@ -3,10 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <link href="/signup.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+
+    <title>Lifecalc - Home</title>
 </head>
-<body>
-    <h1>home</h1>
-</body>
+<body class="join-file ">
+    
+    <div class="container full-height-grow">
+        <header class="main-header">
+            <a href="/" class="brand-logo">
+                <img src="/Images/Logo1.png" height="60" width="60">
+                <div class="brand-logo-name">Lifecalc</div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="/login">Log in </a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="main-section">
+            <form class="form" id="calc" action = "#" method="POST">
+                <h1 class="text">Curious about what you need to afford that dream home?</h1>
+                <div class="input-group">
+                    <label>Monthly Net Income:</label>
+                    <input type="text" class="net-income" autofocus value="6000">
+                </div>                    
+                <div class="input-group">
+                    <label>Home Price:</label>
+                    <input type="text" class="price" autofocus value="450000" >
+                </div>
+                <div class="input-group">
+                    <label>Downpayment:</label>
+                    <input type="text" class="downpayment" value="1000" >
+                </div>
+                <div class="input-group">
+                    <label>Interest:</label>
+                    <input type="text" class="interest" value="5" >
+                </div>
+                </form>
+                 <button class="btn"> Calculate</button>
+                <div class="results">
+                    <div class="right">
+                        <div class="monthly">
+                            <h3>Monthly Payment:</h3>
+                            <div class="value">3333</div>
+                        </div>
+                        <div class="goal-income">
+                            <h3>Goal Income:</h3>
+                            <div class="value">3332</div>
+                        </div>
+                        <div>
+                            <h3>Todays Interest:</h3>
+                            <span id="todays_interest"></span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+                
+    <footer class="main-footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/calculator.js"></script>
+
+</body2>
 </html>

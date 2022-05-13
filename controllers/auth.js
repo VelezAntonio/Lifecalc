@@ -2,6 +2,7 @@ const mysql = require("mysql");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const async = require("hbs/lib/async");
+const { append } = require("express/lib/response");
 
 //create db connection
 const db = mysql.createConnection({
@@ -34,7 +35,6 @@ exports.signup = (req,res) => {
         }
 
         let hashedPassword = await bcrypt.hash(password, 8);
-        console.log(hashedPassword)
         db.query('INSERT INTO users SET ?', {email: email, password: hashedPassword}, (error,results) => {
             if(error){
                 console.log(error);
@@ -91,8 +91,6 @@ exports.login = async (req, res)  => {
 
     const { email, password } = req.body
     let hashedPassword = await bcrypt.hash(password, 8);
-
-    console.log(hashedPassword);
 
 
 }

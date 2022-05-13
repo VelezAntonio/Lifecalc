@@ -1,6 +1,4 @@
-.form--hidden{
-    display: none;
-}
+
 
 .main-section{
     display: flex;
@@ -8,16 +6,36 @@
     flex-grow: .75;
     margin-bottom: 5rem;
 }
+.section{
+    display:flex;
+    flex-direction: column;
+}
+.main-section-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
 
 .signup-main-section .side-image{
     width: 10vw;
     height: auto;
     max-width: 30px;
 }
+.results{
+    padding-left: 10rem;
+    display: flex;
+    justify-content: space-between;
+}
 .form{
     width: 40vw;
     max-width: 40%;
     padding-left: 10rem;
+}
+.form-home{
+    align-items: flex-start;
+    width:33vw;
+    max-width: 33%;
 }
 .text{
     font-size: xx-large;
@@ -92,7 +110,7 @@ a:hover{
     color:green;
     align-self: center;
 }
-.side-image{
+.side-image .results{
     padding-left: 15rem;
 }
 @media (max-width:900px){
