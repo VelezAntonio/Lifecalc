@@ -2,10 +2,10 @@
 
 Video WalkThrough
 
-[![Video WalkThrough](https://img.youtube.com/vi/QSlW6p83lgo/0.jpg)](https://www.youtube.com/watch?v=YQSlW6p83lgo)
+[![Video WalkThrough](https://img.youtube.com/vi/QSlW6p83lgo/0.jpg)](https://www.youtube.com/watch?v=QSlW6p83lgo)
 
 
-
+https://www.youtube.com/watch?v=QSlW6p83lgo&ab_channel=AntonioVelez
 
 This project is a website that will be used to calculate the users lifestyle wants. Allowing for proper bugeting
 using the 50/30/20 rule and showing the user How much they need to make monthly to afford their wants.
