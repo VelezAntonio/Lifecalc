@@ -1,4 +1,4 @@
-NEW VERSION UNDER CONSTRUCTION
+#NEW VERSION UNDER CONSTRUCTION
 
 https://github.com/VelezAntonio/Lifecalc2.0
 
