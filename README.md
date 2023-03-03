@@ -1,3 +1,7 @@
+NEW VERSION UNDER CONSTRUCTION
+
+https://github.com/VelezAntonio/Lifecalc2.0
+
 # Lifecalc
 
 Video WalkThrough
